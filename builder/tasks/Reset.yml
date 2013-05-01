@@ -1,0 +1,50 @@
+# ------------------------------------------
+# Images
+# ------------------------------------------
+Image:
+  got:
+    Filename: assets/Uploads/game-of-thrones.jpg
+    ParentID: 1
+  proJs:
+    Filename: assets/Uploads/pro-javascript-techniques.jpg
+    ParentID: 1
+  ss:
+    Filename: assets/Uploads/silverstripe-book.jpg
+    ParentID: 1
+
+# ------------------------------------------
+# Books
+# ------------------------------------------
+Book:
+  got:
+    Title: Game of Thrones
+    Author: George R. R. Martin
+    ReleaseDate: 2013-05-01 12:03:17
+    ImageID: =>Image.got
+  proJs:
+    Title: Pro Javascript Techniques
+    Author: John Resig
+    ReleaseDate: 2013-05-01 12:03:17
+    ImageID: =>Image.proJs
+  ss:
+    Title: SilverStripe 2.4 Tips
+    Author: Phillipp Krenn
+    ReleaseDate: 2013-05-01 12:03:17
+    ImageID: =>Image.ss
+
+# ------------------------------------------
+# Keywords
+# ------------------------------------------
+Keyword:
+  -
+    Keyword: Fantasy
+    BookID: =>Book.got
+  -
+    Keyword: Sci Fi
+    BookID: =>Book.got
+  -
+    Keyword: Javascript
+    BookID: =>Book.proJs
+  -
+    Keyword: SilverStripe
+    BookID: =>Book.ss

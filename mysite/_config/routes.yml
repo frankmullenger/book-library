@@ -1,0 +1,6 @@
+---
+Name: bookroutes
+---
+Director:
+  rules:
+    'books': 'Book_Controller'
