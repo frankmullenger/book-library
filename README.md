@@ -1,6 +1,6 @@
-# Backbone Library
+# Book Library
 
-Attemtping to make SilverStripe the RESTful API for the [Book Library App](http://addyosmani.github.io/backbone-fundamentals/#exercise-2-book-library---your-first-restful-backbone.js-app).
+Attemtping to make SilverStripe the RESTful API for the [Backbone Book Library App](http://addyosmani.github.io/backbone-fundamentals/#exercise-2-book-library---your-first-restful-backbone.js-app).
 
 ## Environment
 
