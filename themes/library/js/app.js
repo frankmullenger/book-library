@@ -1,9 +1,6 @@
 var app = app || {};
 
 //Change template tags so underscore does not clash with SilverStripe
-// _.templateSettings = { 
-// 	interpolate : /\{\{(.+?)\}\}/g  // {{ title }}
-// };
 // _.templateSettings = {
 //   evaluate:    /\{\{#([\s\S]+?)\}\}/g,            // {{# console.log("blah") }}
 //   interpolate: /\{\{[^#\{]([\s\S]+?)[^\}]\}\}/g,  // {{ title }}

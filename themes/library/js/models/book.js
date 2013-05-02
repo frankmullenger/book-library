@@ -11,7 +11,7 @@ app.Book = Backbone.Model.extend({
     
     // Edit a server response before it is passed to the Model constructor
     parse: function( response ) {
-    	
+
     	// Map _id from server to id on model, so Backbone knows this is an existing model
     	// when actions like "delete" are done Backbone knows to sync with the server if id is present
 	    response.id = response.ID;

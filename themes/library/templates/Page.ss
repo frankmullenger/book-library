@@ -9,12 +9,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<link rel="stylesheet" href="{$ThemeDir}/css/screen.css">
+	<link rel="stylesheet" href="{$ThemeDir}/css/cupertino/jquery-ui-1.10.2.custom.css">
 </head>
 
 <body>
 
 	<div id="books">
-		<form id="addBook" action="#">
+		<form id="addBook" action="#" method="POST" enctype="multipart/form-data">
 			<div>
 				<label for="coverImage">CoverImage: </label><input id="coverImage" type="file" />
 				<label for="title">Title: </label><input id="title" type="text" />

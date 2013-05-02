@@ -47,7 +47,9 @@ class Book_Controller extends API_Controller {
 			// $bookData['keywords'] = $keywords->filter('BookID', $book->ID)->toNestedArray();
 			
 			$bookData['keywords'] = $book->Keywords()->toNestedArray();
-			$bookData['coverImage'] = $book->Image()->CMSThumbnail()->getFilename();
+			
+			$image = $book->Image();
+			$bookData['coverImage'] = ($image->exists()) ? $book->Image()->CMSThumbnail()->getFilename() : null;
 			
 			$library[] = $bookData;
 		}
@@ -61,15 +63,58 @@ class Book_Controller extends API_Controller {
 		return $response;
 	}
 	
+	public function add($request) {
+		
+		// TODO: Upload file
+
+		$data = json_decode($request->getBody());
+
+		// TODO: Validation and error checking here
+		$book = new Book();
+		$book->Title = $data->title;
+		$book->Author = $data->author;
+		$book->ReleaseDate = date('Y-m-d', round($data->releaseDate / 1000)); // Javascript timestamp in milliseconds
+		$book->write();
+		
+		$keys = $data->keywords;
+		if ($keys) foreach ($keys as $key) {
+			$keyword = new Keyword();
+			$keyword->Keyword = $key->keyword;
+			$keyword->BookID = $book->ID;
+			$keyword->write();
+		}
+		
+		$bookData = $book->toMap();
+		$bookData['keywords'] = $book->Keywords()->toNestedArray();
+		// TODO: Need to add image
+		
+		if ($book && $book->exists()) {
+			$response = json_encode($bookData);
+		}
+		else {
+			$response = '{"error":{"text":"None exist"}}';
+		}
+		return $response;
+	}
+	
 	public function update($request) {
 		SS_Log::log(new Exception(print_r('update', true)), SS_Log::NOTICE);
 	}
 	
 	public function delete($request) {
-		SS_Log::log(new Exception(print_r('delete', true)), SS_Log::NOTICE);
+
+		if ($id = Convert::raw2sql($request->param('ID'))) {
+			$book = Book::get()
+				->where("\"ID\" = '$id'")
+				->first();
+			$book->delete();
+			$response = '';
+		}
+		else {
+			$response = '{"error":{"text":"Does no exist"}}';
+		}
+		return $response;
 	}
 	
-	public function add($request) {
-		SS_Log::log(new Exception(print_r('add', true)), SS_Log::NOTICE);
-	}
+	
 }
