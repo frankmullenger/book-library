@@ -15,9 +15,9 @@
 <body>
 
 	<div id="books">
-		<form id="addBook" action="#" method="POST" enctype="multipart/form-data">
+		<form id="addBook" action="#">
 			<div>
-				<label for="coverImage">CoverImage: </label><input id="coverImage" type="file" />
+				<!-- <label for="coverImage">CoverImage: </label><input id="coverImage" type="file" /> -->
 				<label for="title">Title: </label><input id="title" type="text" />
 				<label for="author">Author: </label><input id="author" type="text" />
 				<label for="releaseDate">Release date: </label><input id="releaseDate" type="text" />
