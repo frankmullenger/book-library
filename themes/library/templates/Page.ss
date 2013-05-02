@@ -40,34 +40,8 @@
 		</div> 
 		-->
 	</div>
-	
-	<script id="bookTemplate" type="text/template">
-		<img src="{{= coverImage }}"/>
-		<ul>
-			<li>{{= title }}</li>
-			<li>{{= author }}</li>
-			<li>{{= releaseDate }}</li>
-			<li>{{ _.each( keywords, function( keyobj ) { }} {{= keyobj.Keyword }} {{ } ); }}</li>
-		</ul>
 
-		<button class="delete">Delete</button>
-	</script>
-	
 	<script src="{$ThemeDir}/js/lib/require.js" data-main="{$ThemeDir}/js/app.js"></script>
-	
-	<!--
-	<script src="{$ThemeDir}/js/lib/jquery.js"></script>
-	<script src="{$ThemeDir}/js/lib/underscore.js"></script>
-	<script src="{$ThemeDir}/js/lib/backbone.js"></script>
-	<script src="{$ThemeDir}/js/lib/jquery.dateFormat-1.0.js"></script>
-	<script src="{$ThemeDir}/js/lib/jquery-ui-1.10.2.custom.js"></script>
-
-	<script src="{$ThemeDir}/js/app.js"></script>  
-	<script src="{$ThemeDir}/js/models/book.js"></script>
-	<script src="{$ThemeDir}/js/collections/library.js"></script>
-	<script src="{$ThemeDir}/js/views/book.js"></script>
-	<script src="{$ThemeDir}/js/views/library.js"></script>
-	-->
 
 </body>
 </html>

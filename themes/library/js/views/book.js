@@ -25,12 +25,14 @@
 // 	<button class="delete">Delete</button>
 // </script>
 
-define(["backbone"], function(Backbone) {
+define(['backbone', 'text!templates/bookView.html'], function(Backbone, bookView) {
 	
 	var BookView = Backbone.View.extend({
     tagName: 'div',
     className: 'bookContainer',
-    template: _.template( $( '#bookTemplate' ).html() ),
+    
+    // template: _.template( $( '#bookTemplate' ).html() ),
+    template: _.template( bookView ),
 
     render: function() {
       //this.el is what we defined in tagName. use $el to get access to jQuery html() function

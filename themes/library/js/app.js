@@ -5,7 +5,8 @@ require.config({
     'underscore': 'lib/underscore',
     'backbone': 'lib/backbone',
     'ui': 'lib/jquery-ui-1.10.2.custom',
-    'dateformat': 'lib/jquery.dateFormat-1.0'
+    'dateformat': 'lib/jquery.dateFormat-1.0',
+    'text': 'lib/text',
   },
   shim: {
 	  'underscore': {

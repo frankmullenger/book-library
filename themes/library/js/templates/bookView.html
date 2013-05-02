@@ -1,0 +1,9 @@
+<img src="{{= coverImage }}"/>
+<ul>
+	<li>{{= title }}</li>
+	<li>{{= author }}</li>
+	<li>{{= releaseDate }}</li>
+	<li>{{ _.each( keywords, function( keyobj ) { }} {{= keyobj.Keyword }} {{ } ); }}</li>
+</ul>
+
+<button class="delete">Delete</button>
