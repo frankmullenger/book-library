@@ -1,12 +1,13 @@
-var app = app || {};
 
-app.Book = Backbone.Model.extend({
+define(["backbone"], function(Backbone) {
+
+	var Book = Backbone.Model.extend({
     defaults: {
-        coverImage: 'themes/library/img/placeholder.png',
-        title: 'No title',
-        author: 'Unknown',
-        releaseDate: 'Unknown',
-        keywords: 'None'
+      coverImage: 'themes/library/img/placeholder.png',
+      title: 'No title',
+      author: 'Unknown',
+      releaseDate: 'Unknown',
+      keywords: 'None'
     },
     
     // Edit a server response before it is passed to the Model constructor
@@ -21,4 +22,6 @@ app.Book = Backbone.Model.extend({
 	    
 	    return response;
 		}
+	});
+	return Book;
 });

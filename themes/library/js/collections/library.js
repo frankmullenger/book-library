@@ -1,6 +1,9 @@
-var app = app || {};
 
-app.Library = Backbone.Collection.extend({
-    model: app.Book,
-    url: '/books'
+define(["backbone", "models/book"], function(Backbone, Book) {
+
+	var Library = Backbone.Collection.extend({
+	    model: Book,
+	    url: '/books'
+	});
+	return Library;
 });

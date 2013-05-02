@@ -1,4 +1,3 @@
-var app = app || {};
 
 // Basically we are setting the view up like this:
 // <div class="bookContainer">
@@ -26,7 +25,9 @@ var app = app || {};
 // 	<button class="delete">Delete</button>
 // </script>
 
-app.BookView = Backbone.View.extend({
+define(["backbone"], function(Backbone) {
+	
+	var BookView = Backbone.View.extend({
     tagName: 'div',
     className: 'bookContainer',
     template: _.template( $( '#bookTemplate' ).html() ),
@@ -49,4 +50,6 @@ app.BookView = Backbone.View.extend({
       //Delete view
       this.remove();
     }
+	});
+	return BookView;
 });
