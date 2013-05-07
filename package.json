@@ -1,0 +1,21 @@
+{
+  "name": "library.local",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/frankmullenger/book-library.git"
+  },
+  "author": "Frank Mullenger",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "56b9c468b965a43d7100b8d1b19c5772fda0476e",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0"
+  }
+}

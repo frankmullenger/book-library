@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-	<link rel="stylesheet" href="{$ThemeDir}/css/screen.css">
+	<link rel="stylesheet" href="{$ThemeDir}/css/screen.min.css">
 	<link rel="stylesheet" href="{$ThemeDir}/css/cupertino/jquery-ui-1.10.2.custom.css">
 </head>
 
